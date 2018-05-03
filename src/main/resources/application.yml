@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: "@project.artifactId@"
+  output:
+    ansi:
+      enabled: always
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/health?createDatabaseIfNotExist=true&useUnicode=true&verifyServerCertificate=false&useSSL=false
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+server:
+  port: 9010
+
+flyway:
+  sql-migration-prefix: V
+  sql-migration-suffix: sql
+  enabled: true
